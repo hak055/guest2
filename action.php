@@ -2,8 +2,8 @@
 	include ("dbconnect.php");
 
 	// получаем переменные из формы
-	$username=$_REQUEST['username'];
-	$msg=$_REQUEST['msg'];
+	$username=htmlspecialchars($_REQUEST['username']);
+	$msg=htmlspecialchars($_REQUEST['msg']);
 	$action=$_REQUEST['action'];
 	
 	if ($action=="add")
